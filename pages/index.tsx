@@ -1,9 +1,13 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import Navbar from "../components/Navbar";
 
 const Home: NextPage = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <main className="xl:w-[1200px] m-auto overflow-hidden h-[100vh] flex md:flex-col xl:flex-row gap-8 md:p-6">
+      <Navbar />
+      <div>suggestions</div>
+    </main>
+  );
 };
 
 export default Home;
