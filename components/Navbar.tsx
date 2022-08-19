@@ -29,8 +29,8 @@ const Navbar = () => {
                 </Popover.Button>
                 <Popover.Overlay className="fixed inset-0 top-[72px] bg-black opacity-30" />
 
-                <Popover.Panel className="absolute top-[72px] left-100 right-0 overflow-y-hidden">
-                  <div className="p-4 flex flex-col gap-4 bg-[#F7F8FD] h-[89vh] sm:h-[91vh] ">
+                <Popover.Panel className="z-50 absolute top-[72px] left-100 right-0 bottom-0 bg-[#F7F8FD]">
+                  <div className="p-4 flex flex-col gap-4  ">
                     <Tags />
                     <Roadmap />
                   </div>
