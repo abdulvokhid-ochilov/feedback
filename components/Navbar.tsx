@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import { Popover } from "@headlessui/react";
 
-const Navbar = () => {
+const Navbar = ({ setIsOpen }: { setIsOpen: any }) => {
   return (
     <div className="flex flex-row flex-wrap xl:flex-col xl:space-y-4 sm:space-x-2 xl:space-x-0 md:mx-auto xl:mx-0 md:w-[689px] xl:w-[255px]">
       <div className="bg-no-repeat bg-cover xl:bg-[url('../assets/suggestions/desktop/background-header.png')] md:bg-[url('../assets/suggestions/tablet/background-header.png')] bg-[url('../assets/suggestions/mobile/background-header.png')] md:rounded-lg text-white p-3 md:p-4 md:pt-10 w-full  md:w-[222px] xl:w-full h-[72px] md:h-[177px] xl:h-auto flex justify-between items-center md:items-end ">
@@ -20,6 +20,7 @@ const Navbar = () => {
           <Popover className="md:hidden">
             {({ open }) => (
               <>
+                {setIsOpen(open)}
                 <Popover.Button>
                   {open ? (
                     <Image src={Close} alt="icon close" />
@@ -27,9 +28,9 @@ const Navbar = () => {
                     <Image src={Hamburger} alt="icon menu" />
                   )}
                 </Popover.Button>
-                <Popover.Overlay className="fixed inset-0 top-[72px] bg-black opacity-30" />
+                <Popover.Overlay className="fixed inset-0 top-[72px] bg-black opacity-30 overflow-hidden" />
 
-                <Popover.Panel className="z-50 absolute top-[72px] left-100 right-0 bottom-0 bg-[#F7F8FD]">
+                <Popover.Panel className="z-50 fixed top-[72px] left-100 right-0 bottom-0 bg-[#F7F8FD] overflow-hidden">
                   <div className="p-4 flex flex-col gap-4  ">
                     <Tags />
                     <Roadmap />
