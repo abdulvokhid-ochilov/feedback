@@ -5,7 +5,7 @@ import Comment from "../assets/shared/icon-comments.svg";
 
 const FeedbackCard = () => {
   return (
-    <div className="bg-white rounded-lg p-6 flex flex-col sm:flex-row sm:space-x-6 hover:cursor-pointer md:w-[689px] xl:w-[824px] mx-auto">
+    <div className="bg-white rounded-lg p-4 sm:p-6 flex flex-col sm:flex-row sm:space-x-6 hover:cursor-pointer w-[340px] sm:w-[689px] xl:w-[824px] mx-auto h-fit">
       <div className="hidden sm:block">
         <UpvoteButton />
       </div>

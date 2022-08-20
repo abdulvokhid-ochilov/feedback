@@ -33,7 +33,7 @@ const SuggestionsHeader = () => {
                 </p>
               </Menu.Button>
 
-              <Menu.Items className="absolute top-[160px] md:top-[340px] xl:top-[125px] left-[20px] md:left-[480px] xl:left-[680px] right-0 flex flex-col bg-white text-[#647196]  w-[256px] drop-shadow-2xl rounded-lg">
+              <Menu.Items className="absolute top-[160px] md:top-[340px] xl:top-[125px] left-[20px] md:left-[480px] xl:left-[680px] right-0 flex flex-col bg-white text-[#647196]  w-[256px] drop-shadow-2xl rounded-lg z-50">
                 <Menu.Item>
                   {({ active }) => (
                     <div className="text-xs md:text-sm px-4 py-2 border-b-[1px] border-[#e6ebfd] hover:text-[#AD1FEA] flex flex-row items-center justify-between">

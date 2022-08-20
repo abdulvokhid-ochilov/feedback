@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <main
-      className={`xl:w-[1200px] m-auto  h-[100vh] flex flex-col xl:flex-row md:gap-8 md:p-6 ${
+      className={`xl:w-[1200px] m-auto  min-h-[100vh] flex flex-col xl:flex-row md:gap-8 md:p-6 ${
         isOpen && "overflow-hidden"
       }`}
     >
